@@ -1,9 +1,25 @@
 const PAGE_DATA = {
     mattresses: [
-        {title: 'Premium Mattress',
+        {item: 'Premium Mattress',
         desc: '-',
         price: '-',
-        stock: '-'
+        stock: '-',
+        image: '-'
     }
     ]
+};
+
+function renderMattresses() {
+    var source = document.getElementById('mattressTemplate').innerHTML;
+    var template = Handlebars.compile(source);
+    var data = PAGE_DATA.mattresses
+    for(mattress in data) {
+        var html = template({
+            item: mattress.item,
+            desc: mattress.desc,
+            price: mattress.price,
+            stock: mattress.stock,
+            image: mattress.image
+        })
+    }
 }
