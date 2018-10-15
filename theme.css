@@ -1,4 +1,8 @@
-.bg-orange {
-    background-color: #FF8C00;
+.bg-blue {
+    background-color: #AFEEEE;
     color: white;
+}
+
+.border-blue {
+    border: solid 1px #AFEEEE;
 }
