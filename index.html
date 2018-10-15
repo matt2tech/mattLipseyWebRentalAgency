@@ -21,14 +21,14 @@
     </nav>
     </main>
     <script id='mattressTemplate' type='text/x-handlebars-template'>
-    <div class='d-flex flex-column'>
-        <h4>{{item}}</h4>
-        <div class='d-flex'>
-        <img src={{image}} alt='mattress'>
-        <div>
-        <p>{{desc}}</p>
-        <p>{{price}}</p>
-        <p>{{stock}}</p>
+    <div class='d-flex flex-column m-3 border'>
+        <h4 class='bg-orange'>{{item}}</h4>
+        <div class='d-flex p-3'>
+        <img class='mattress-img' src={{image}} alt='mattress'>
+        <div class='ml-3'>
+        <p><b>Description:</b> {{desc}}</p>
+        <p><b>Cost:</b> ${{price}}</p>
+        <p><b>In-Stock:</b> {{stock}}</p>
         </div>
         </div>
     </div>
