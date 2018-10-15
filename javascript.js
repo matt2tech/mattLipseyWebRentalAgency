@@ -24,17 +24,17 @@ const PAGE_DATA = {
         stock: 11,
         image: 'images/highQualityFullMattress.jpeg'
     },
-    {item: 'Premium Queen Mattress',
-        desc: 'Premium queen-size mattress. Top-quality and wonderful sleep',
-        price: (50).toFixed(2),
-        stock: 21,
-        image: 'images/premiumQueenMattress.jpeg'
+    {item: 'Luxury King Mattress',
+        desc: 'Luxury king-size mattress. Sleep like a king.',
+        price: (75).toFixed(2),
+        stock: 10,
+        image: 'images/luxuryKingMattress.jpg'
     },
-    {item: 'Premium Queen Mattress',
-        desc: 'Premium queen-size mattress. Top-quality and wonderful sleep',
-        price: (50).toFixed(2),
-        stock: 21,
-        image: 'images/premiumQueenMattress.jpeg'
+    {item: 'Twin Twin Mattresses',
+        desc: "Twin twin-size mattresses. Got twins? Here's a deal.",
+        price: (30).toFixed(2),
+        stock: 7,
+        image: 'images/twinTwinMattress.jpg'
     }
     ]
 };
