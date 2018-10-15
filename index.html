@@ -15,7 +15,7 @@
 </head>
 <body class='bg-light'>
     <main id='store'>
-    <nav class='bg-orange nav-font navbar pl-4 d-flex justify-content-center align-items-baseline'>
+    <nav class='bg-blue nav-font navbar pl-4 d-flex justify-content-center align-items-baseline'>
         <h1>Matt's Mattresses</h1>
         <h5 class='pl-4'>Only the finest "Matt"resses</h5>
     </nav>
@@ -23,10 +23,10 @@
 
     <!-- templates go here -->
     <script id='mattressTemplate' type='text/x-handlebars-template'>
-    <div id='template' class='d-flex flex-column m-3 border rounded'>
-        <h4 class='bg-orange pl-2'>{{item}}</h4>
+    <div id='template' class='d-flex flex-column m-3 border-blue rounded'>
+        <h4 class='bg-blue pl-2'>{{item}}</h4>
         <div class='d-flex p-3'>
-        <img class='mattress-img' src={{image}} alt='mattress'>
+        <img class='mattress-img border-blue rounded' src={{image}} alt='mattress'>
         <div class='ml-3'>
         <p><b>Description:</b> {{desc}}</p>
         <p><b>Cost:</b> ${{price}}</p>
