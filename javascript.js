@@ -7,22 +7,22 @@ const PAGE_DATA = {
         image: 'images/premiumQueenMattress.jpeg'
     },
     {item: 'Soft King Mattress',
-        desc: 'King-size mattress. Plenty of soft space.',
+        desc: 'King-size mattress. Plenty of soft space to rest on.',
         price: (45).toFixed(2),
         stock: 15,
         image: 'images/kingMattress.jpg'
     },
-    {item: 'Premium Queen Mattress',
-        desc: 'Premium queen-size mattress. Top-quality and wonderful sleep',
-        price: (50).toFixed(2),
-        stock: 21,
-        image: 'images/premiumQueenMattress.jpeg'
+    {item: 'Top-Notch Twin Mattress',
+        desc: 'Top-notch twin-size mattress. Perfect for jumping up and down on.',
+        price: (30.50).toFixed(2),
+        stock: 19,
+        image: 'images/topNotchTwinMattress.jpeg'
     },
-    {item: 'Premium Queen Mattress',
-        desc: 'Premium queen-size mattress. Top-quality and wonderful sleep',
-        price: (50).toFixed(2),
-        stock: 21,
-        image: 'images/premiumQueenMattress.jpeg'
+    {item: 'High-Quality Full Mattress',
+        desc: 'High-quality full-size mattress. For those who wanna take up the whole bed.',
+        price: (54).toFixed(2),
+        stock: 11,
+        image: 'images/highQualityFullMattress.jpeg'
     },
     {item: 'Premium Queen Mattress',
         desc: 'Premium queen-size mattress. Top-quality and wonderful sleep',
