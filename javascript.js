@@ -14,12 +14,16 @@ function renderMattresses() {
     var template = Handlebars.compile(source);
     var data = PAGE_DATA.mattresses
     for(mattress in data) {
+        console.log(mattress)
         var html = template({
-            item: mattress.item,
-            desc: mattress.desc,
-            price: mattress.price,
-            stock: mattress.stock,
-            image: mattress.image
-        })
+            item: data[mattress].item,
+            desc: data[mattress].desc,
+            price: data[mattress].price,
+            stock: data[mattress].stock,
+            image: data[mattress].image
+        });
+        document.getElementById('store').insertAdjacentHTML('beforeend', html)
     }
 }
+
+renderMattresses()
