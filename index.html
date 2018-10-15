@@ -15,13 +15,15 @@
 </head>
 <body class='bg-light'>
     <main id='store'>
-    <nav class='bg-orange nav-font navbar navbar-expand-xl pl-4 d-flex justify-content-center align-items-baseline'>
+    <nav class='bg-orange nav-font navbar pl-4 d-flex justify-content-center align-items-baseline'>
         <h1>Matt's Mattresses</h1>
         <h5 class='pl-4'>Only the finest "Matt"resses</h5>
     </nav>
     </main>
+
+    <!-- templates go here -->
     <script id='mattressTemplate' type='text/x-handlebars-template'>
-    <div class='d-flex flex-column m-3 border rounded'>
+    <div id='template' class='d-flex flex-column m-3 border rounded'>
         <h4 class='bg-orange pl-2'>{{item}}</h4>
         <div class='d-flex p-3'>
         <img class='mattress-img' src={{image}} alt='mattress'>
