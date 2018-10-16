@@ -3,7 +3,7 @@
 }
 
 .btn:active {
-    background-color: rgb(154, 209, 209);
+    background-color: #AFEEEE !important;
 }
 
 .btn:focus {
@@ -11,7 +11,7 @@
 }
 
 .btn:hover {
-    border: solid 1px rgb(154, 209, 209);
+    background-color: rgb(154, 209, 209);
 }
 
 .hide {
