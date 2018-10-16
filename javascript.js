@@ -62,7 +62,7 @@ function showForms() {
         var btn = item.querySelector(".btn");
         btn.addEventListener('click', function() {
             document.querySelector('.show').classList.replace('show', 'hide');
-            document.querySelector('form').classList.replace('hide', 'show');
+            document.querySelector('fieldset').classList.replace('hide', 'show');
         });
     });
 }
