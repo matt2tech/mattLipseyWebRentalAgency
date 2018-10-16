@@ -10,6 +10,10 @@
     border: solid 1px rgb(154, 209, 209);
 }
 
+.hide {
+    display: none;
+}
+
 .mattress-img {
     height: 100%;
     width: auto;
@@ -23,3 +27,8 @@
     #template {
         display: block !important;
     }
+}
+
+.show {
+    display: block;
+}
