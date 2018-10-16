@@ -1,3 +1,7 @@
+.btn {
+    color: grey !important;
+}
+
 .btn:active {
     background-color: rgb(154, 209, 209);
 }
