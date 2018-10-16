@@ -56,11 +56,12 @@ function renderMattresses() {
 }
 
 function showForms() {
-    var source = document.querySelectorAll('#store');
-    source.forEach(function(item) {
+    var source = document.getElementById('store');
+    var buttons = source.querySelectorAll('.btn');
+    console.log(buttons)
+    buttons.forEach(function(item) {
         console.log(item)
-        var btn = item.querySelector(".btn");
-        btn.addEventListener('click', function() {
+        item.addEventListener('click', function() {
             document.querySelector('.show').classList.replace('show', 'hide');
             document.querySelector('fieldset').classList.replace('hide', 'show');
         });
