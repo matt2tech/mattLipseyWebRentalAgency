@@ -25,42 +25,46 @@
     <div class='d-flex flex-column align-items-center mt-3'>
         <div class='border-blue rounded'>
             <h3 class='bg-blue pl-2'>Billing Info</h3>
-            <fieldset class='hide p-3 d-flex flex-column'>
+            <form>
+                <fieldset class='hide p-3 d-flex flex-column'>
                     <div class='d-flex align-items-baseline justify-content-between'>
                         <label class='label'>Name:</label>
-                        <input class='input' type="text" placeholder="John Doe" required>
+                        <input class='input' type="text" placeholder="John Doe" required='required'>
                     </div>
                     <div class='d-flex align-items-baseline justify-content-between'>
                         <label class='label'>Email:</label>
-                        <input class='input' type="email" placeholder="jdoe@email.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+                        <input class='input' type="email" placeholder="jdoe@email.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+                        required='required'>
                     </div>
                     <div class='d-flex align-items-baseline justify-content-between'>
                         <label class='label'>Phone:</label>
-                        <input class='input' type='tel' placeholder="1234567890" maxlength='10' pattern="[0-9]"
-                            required />
+                        <input class='input' type='tel' placeholder="1234567890" maxlength='12' pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                        required='required' />
                     </div>
                     <div class='d-flex align-items-baseline justify-content-between'>
                         <label class="label">Address:</label>
-                        <input class='input' type="text" placeholder='8846 Brookside Street' required>
+                        <input class='input' type="text" placeholder='8846 Brookside Street' required='required'>
                     </div>
                     <div class='d-flex align-items-baseline justify-content-between'>
                         <label class="label">City:</label>
-                        <input class='input' type="text" placeholder='Millington, TN' pattern='[a-zA-Z]+, [A-Z]{2}' required>
+                        <input class='input' type="text" placeholder='Millington, TN' pattern='[a-zA-Z]+, [A-Z]{2}'
+                        required='required'>
                     </div>
                     <div class='d-flex align-items-baseline justify-content-between'>
                         <label class="label">Zip Code:</label>
-                        <input class='input' type="text" placeholder='38053' maxlength="5" pattern='[0-9]' required>
+                        <input class='input' type="text" placeholder='38053' maxlength="5" pattern='[0-9]{5}' required='required'>
                     </div>
                     <div class='d-flex align-items-baseline justify-content-between'>
                         <label class='label'>Payment:</label>
                         <div class='mt-2'>
-                            <input type="radio" name="gender" value="cash" checked> Cash
-                            <input type="radio" name="gender" value="card"> Card
-                            <input type="radio" name="gender" value="check"> Check
+                            <input type="radio" name="payment" value="cash" checked> Cash
+                            <input type="radio" name="payment" value="card"> Card
+                            <input type="radio" name="payment" value="check"> Check
                         </div>
                     </div>
-                    <button type="submit" class='btn border-blue bg-blue'>Submit</button>
-            </fieldset>
+                    <button type="submit" href='#' class='btn border-blue bg-blue'>Submit</button>
+                </fieldset>
+            </form>
         </div>
     </div>
 
