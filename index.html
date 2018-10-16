@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Rental Store</title>
-    <link rel="shortcut icon"
- href="images/mattress.jpg">
+    <link rel="shortcut icon" href="images/mattress.jpg">
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='theme.css'>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
     <script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js' defer></script>
     <script src="javascript.js" defer></script>
 </head>
+
 <body class='bg-light'>
     <nav class='bg-blue nav-font navbar pl-4 d-flex justify-content-center align-items-baseline'>
         <h1>Matt's Mattresses</h1>
@@ -20,20 +22,47 @@
     </nav>
     <main id='store' class='show'>
     </main>
-    <fieldset class='hide'>
-        <legend>Billing Info</legend>
-            <p>
-                <label>Order Name:</label>
-                <input type="text" placeholder="Your name...">
-            <p>
-                <label>Email:</label>
-                <input type="email" placeholder="Your email...">
-            </p>
-            <p> <label>Phone:</label>
-                <input type='tel' placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
-            </p>
-            <button type="submit" disabled class='signup-btn'>Submit</button>
-        </fieldset>
+    <div class='d-flex flex-column align-items-center mt-3'>
+        <div class='border-blue rounded'>
+            <h3 class='bg-blue pl-2'>Billing Info</h3>
+            <fieldset class='hide p-3 d-flex flex-column'>
+                    <div class='d-flex align-items-baseline justify-content-between'>
+                        <label class='label'>Name:</label>
+                        <input class='input' type="text" placeholder="John Doe" required>
+                    </div>
+                    <div class='d-flex align-items-baseline justify-content-between'>
+                        <label class='label'>Email:</label>
+                        <input class='input' type="email" placeholder="jdoe@email.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+                    </div>
+                    <div class='d-flex align-items-baseline justify-content-between'>
+                        <label class='label'>Phone:</label>
+                        <input class='input' type='tel' placeholder="1234567890" pattern="[0-9]{10}"
+                            required />
+                    </div>
+                    <div class='d-flex align-items-baseline justify-content-between'>
+                        <label class="label">Address:</label>
+                        <input class='input' type="text" placeholder='8846 Brookside Street' required>
+                    </div>
+                    <div class='d-flex align-items-baseline justify-content-between'>
+                        <label class="label">City:</label>
+                        <input class='input' type="text" placeholder='Millington, TN' required>
+                    </div>
+                    <div class='d-flex align-items-baseline justify-content-between'>
+                        <label class="label">Zip Code:</label>
+                        <input class='input' type="text" placeholder='38053' pattern='[0-9]{5}' required>
+                    </div>
+                    <div class='d-flex align-items-baseline justify-content-between'>
+                        <label class='label'>Payment:</label>
+                        <div class='mt-2'>
+                            <input type="radio" name="gender" value="male"> Cash
+                            <input type="radio" name="gender" value="female"> Card
+                            <input type="radio" name="gender" value="other"> Check
+                        </div>
+                    </div>
+                    <button type="submit" disabled class='signup-btn'>Submit</button>
+            </fieldset>
+        </div>
+    </div>
 
     <!-- templates go here -->
     <script id='mattressTemplate' type='text/x-handlebars-template'>
@@ -50,10 +79,14 @@
         </div>
     </div>
     </script>
-    
+
 </body>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
 <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/jquery.inputmask.bundle.js' crossorigin="anonymous"></script>
+
 </html>
