@@ -58,12 +58,10 @@ function renderMattresses() {
 function showForms() {
     var source = document.getElementById('store');
     var buttons = source.querySelectorAll('.btn');
-    console.log(buttons)
     buttons.forEach(function(item) {
-        console.log(item)
         item.addEventListener('click', function() {
             document.querySelector('.show').classList.replace('show', 'hide');
-            document.querySelector('fieldset').classList.replace('hide', 'show');
+            document.querySelector('form').classList.replace('hide', 'show');
         });
     });
 }
