@@ -75,25 +75,9 @@ function showForms() {
     });
 }
 
-// function checkValid() {
-//     var source = document.querySelectorAll("#form-field");
-//     var btn = document.querySelector("fieldset button");
-//     source.forEach(function(item) {
-//         item.querySelector("input").addEventListener("input", function() {
-//             console.log(item)
-//             if (item.querySelector("input").checkValidity() === true) {
-//                 console.log(item)
-//                 btn.disabled = false;
-//             } else {
-//                 btn.disabled = true;
-//             }
-//         });
-//         document.querySelector(".alert").addEventListener("click", function() {
-//             alert("Thank you");
-//         });
-//     });
-// }
+function salesConfirm() {
+    alert('Thank you for your purchase')
+}
 
 renderMattresses();
 showForms();
-checkValid();
