@@ -43,11 +43,16 @@
                     </div>
                     <div id='form-field' class='d-flex align-items-baseline justify-content-between'>
                         <label class="label">Address:</label>
-                        <input class='input' type="text" placeholder='8846 Brookside Street' required='required'>
+                        <input class='input' type="text" placeholder='8846 Brookside Street' pattern='[a-zA-Z0-9]{}' required='required'>
                     </div>
                     <div id='form-field' class='d-flex align-items-baseline justify-content-between'>
                         <label class="label">City:</label>
-                        <input class='input' type="text" placeholder='Millington, TN' pattern='[a-zA-Z]+, [A-Z]{2}'
+                        <input class='input' type="text" placeholder='Millington' pattern='[a-zA-Z]{}'
+                            required='required'>
+                    </div>
+                    <div id='form-field' class='d-flex align-items-baseline justify-content-between'>
+                        <label class="label">State:</label>
+                        <input class='input' type="text" placeholder='TN' maxlength='2' pattern='[A-Z]{2}'
                             required='required'>
                     </div>
                     <div id='form-field' class='d-flex align-items-baseline justify-content-between'>
