@@ -92,5 +92,9 @@ function salesConfirm() {
     document.querySelector('form').classList.replace('show', 'hide');
 }
 
+function paymentForm(payment) {
+    document.getElementById('customerPayment').innerHTML = payment
+}
+
 renderMattresses();
 showForms();
