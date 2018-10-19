@@ -31,6 +31,9 @@
     #template {
         display: block !important;
     }
+    #saleBox {
+        width: 100% !important;
+    }
 }
 
 .show {
