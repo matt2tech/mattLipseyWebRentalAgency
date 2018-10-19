@@ -27,36 +27,40 @@
             <div class='border-blue rounded'>
                 <h3 class='bg-blue pl-2'>Billing Info</h3>
                 <fieldset class='p-3 d-flex flex-column'>
-                    <div id='form-field' class='d-flex align-items-baseline justify-content-between'>
+                    <div class='d-flex align-items-baseline justify-content-between'>
                         <label class='label'>Name:</label>
-                        <input class='input' type="text" placeholder="John Doe" required='required' patter='[a-zA-Z]+'>
+                        <input id='form-name' class='input' type="text" placeholder="John Doe" value='name' required='required'
+                            patter='[a-zA-Z ]+'>
                     </div>
-                    <div id='form-field' class='d-flex align-items-baseline justify-content-between'>
+                    <div class='d-flex align-items-baseline justify-content-between'>
                         <label class='label'>Email:</label>
-                        <input class='input' type="email" placeholder="jdoe@email.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+                        <input id='form-email' class='input' type="email" placeholder="jdoe@email.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
                             required='required'>
                     </div>
-                    <div id='form-field' class='d-flex align-items-baseline justify-content-between'>
+                    <div class='d-flex align-items-baseline justify-content-between'>
                         <label class='label'>Phone:</label>
-                        <input class='input' type='tel' placeholder="1234567890" maxlength='10' pattern="[0-9]{10}"
-                            required='required' />
+                        <input id='form-number' class='input' type='tel' placeholder="1234567890" maxlength='10'
+                            pattern="[0-9]{10}" required='required' />
                     </div>
-                    <div id='form-field' class='d-flex align-items-baseline justify-content-between'>
+                    <div class='d-flex align-items-baseline justify-content-between'>
                         <label class="label">Address:</label>
-                        <input class='input' type="text" placeholder='8846 Brookside Street' pattern='[a-zA-Z0-9 ]+'
+                        <input id='form-street' class='input' type="text" placeholder='8846 Brookside Street' pattern='[a-zA-Z0-9 ]+'
                             required='required'>
                     </div>
-                    <div id='form-field' class='d-flex align-items-baseline justify-content-between'>
+                    <div class='d-flex align-items-baseline justify-content-between'>
                         <label class="label">City:</label>
-                        <input class='input' type="text" placeholder='Millington' pattern='[a-zA-Z]+' required='required'>
+                        <input id='form-city' class='input' type="text" placeholder='Millington' pattern='[a-zA-Z ]+'
+                            required='required'>
                     </div>
-                    <div id='form-field' class='d-flex align-items-baseline justify-content-between'>
+                    <div class='d-flex align-items-baseline justify-content-between'>
                         <label class="label">State:</label>
-                        <input class='input' type="text" placeholder='TN' maxlength='2' pattern='[A-Z]{2}' required='required'>
+                        <input id='form-state' class='input' type="text" placeholder='TN' maxlength='2' pattern='[A-Z]{2}'
+                            required='required'>
                     </div>
-                    <div id='form-field' class='d-flex align-items-baseline justify-content-between'>
+                    <div class='d-flex align-items-baseline justify-content-between'>
                         <label class="label">Zip Code:</label>
-                        <input class='input' type="text" placeholder='38053' maxlength="5" pattern='[0-9]{5}' required='required'>
+                        <input id='form-zip' class='input' type="text" placeholder='38053' maxlength="5" pattern='[0-9]{5}'
+                            required='required'>
                     </div>
                     <div class='d-flex align-items-baseline justify-content-between'>
                         <label class='label'>Payment:</label>
@@ -74,10 +78,10 @@
     </form>
     <div id='sales' class='hide'>
         <div class='d-flex flex-column align-items-center mt-3'>
-            <div class='border-blue rounded'>
-                <h4 class='bg-blue'>Sale Processed</h4>
-                <div class='d-flex flex-column align-items-center p-3'>
-                    <p></p>
+            <div id='saleBox' class='border-blue rounded w-25'>
+                <h4 class='bg-blue pl-2'>Sale Processed</h4>
+                <div id='billing-info' class='d-flex flex-column p-3'>
+                    <p id='charge' class='text-center'></p>
                 </div>
             </div>
         </div>
@@ -96,6 +100,26 @@
         <button class='btn bg-blue border-blue' type='button' value={{price}}>Rent</button>
         </div>
     </div>
+    </script>
+
+    <script id='salesTemplate' type='text/x-handlebars-template'>
+        <div class='d-flex align-items-baseline justify-content-between'>
+            <p><b>Name:</b></p>
+            <p>{{formName}}</p>
+        </div>
+        <div class='d-flex align-items-baseline justify-content-between'>
+            <p><b>Email:</b></p>
+            <p>{{formEmail}}</p>
+        </div>
+        <div class='d-flex align-items-baseline justify-content-between'>
+            <p><b>Telephone:</b></p>
+            <p>{{formNum}}</p>
+        </div>
+        <div class='d-flex align-items-baseline justify-content-between'>
+            <p><b>Address:</b></p>
+            <p>{{formStreetAddress}}<br />{{formAddress}}</p>
+        </div>
+        <input type="button" class='btn bg-blue border-blue' value="Confirm" onClick="window.location.href=window.location.href">
     </script>
 
 </body>
