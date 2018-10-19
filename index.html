@@ -65,9 +65,10 @@
                     <div class='d-flex align-items-baseline justify-content-between'>
                         <label class='label'>Payment:</label>
                         <div class='mt-2'>
-                            <input type="radio" name="payment" value="cash" checked> Cash
-                            <input type="radio" name="payment" value="card"> Card
-                            <input type="radio" name="payment" value="check"> Check
+                            <input type="radio" name="payment" value="Cash" onclick="paymentForm(this.value)" checked>
+                            Cash
+                            <input type="radio" name="payment" value="Card" onclick="paymentForm(this.value)"> Card
+                            <input type="radio" name="payment" value="Check" onclick="paymentForm(this.value)"> Check
                         </div>
                     </div>
                     <button type="submit" class='btn border-blue bg-blue alert-btn'>Submit</button>
@@ -82,6 +83,10 @@
                 <h4 class='bg-blue pl-2'>Sale Processed</h4>
                 <div id='billing-info' class='d-flex flex-column p-3'>
                     <p id='charge' class='text-center'></p>
+                    <div class='d-flex align-items-baseline justify-content-between'>
+                        <p><b>Payment:</b></p>
+                        <p id='customerPayment'>Cash</p>
+                    </div>
                 </div>
             </div>
         </div>
