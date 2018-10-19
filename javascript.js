@@ -71,12 +71,14 @@ function showForms() {
         item.addEventListener("click", function() {
             document.querySelector(".show").classList.replace("show", "hide");
             document.querySelector("form").classList.replace("hide", "show");
+            document.querySelector('#sales p').innerHTML = 'Your charge is $' + item.value;
         });
     });
 }
 
 function salesConfirm() {
-    alert('Thank you for your purchase')
+    document.getElementById('sales').classList.replace('hide', 'show');
+    document.querySelector('form').classList.replace('show', 'hide');
 }
 
 renderMattresses();
