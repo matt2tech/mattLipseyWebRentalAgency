@@ -71,12 +71,23 @@ function showForms() {
         item.addEventListener("click", function() {
             document.querySelector(".show").classList.replace("show", "hide");
             document.querySelector("form").classList.replace("hide", "show");
-            document.querySelector('#sales p').innerHTML = 'Your charge is $' + item.value;
+            document.getElementById('charge').innerHTML = `Your charge is $${item.value}`
         });
     });
 }
 
 function salesConfirm() {
+    var source = document.getElementById('salesTemplate').innerHTML;
+    var template = Handlebars.compile(source);
+    var name = document.getElementById('form-name').value, email = document.getElementById('form-email').value, num = document.getElementById('form-number').value, street = document.getElementById('form-street').value, city = document.getElementById('form-city').value, state = document.getElementById('form-state').value, zip = document.getElementById('form-zip').value;
+    var html = template({
+        formName: name,
+        formEmail: email,
+        formNum: num,
+        formStreetAddress: street,
+        formAddress: `${city}, ${state} ${zip}`
+    })
+    document.getElementById('billing-info').insertAdjacentHTML('beforeend', html);
     document.getElementById('sales').classList.replace('hide', 'show');
     document.querySelector('form').classList.replace('show', 'hide');
 }
