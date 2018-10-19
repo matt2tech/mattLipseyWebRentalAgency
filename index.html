@@ -22,14 +22,14 @@
     </nav>
     <main id='store' class='show'>
     </main>
-    <form class='hide' onsubmit="salesConfirm()">
+    <form class='hide' onsubmit="salesConfirm();return false">
         <div class='d-flex flex-column align-items-center mt-3'>
             <div class='border-blue rounded'>
                 <h3 class='bg-blue pl-2'>Billing Info</h3>
                 <fieldset class='p-3 d-flex flex-column'>
                     <div id='form-field' class='d-flex align-items-baseline justify-content-between'>
                         <label class='label'>Name:</label>
-                        <input class='input' type="text" placeholder="John Doe" required='required'>
+                        <input class='input' type="text" placeholder="John Doe" required='required' patter='[a-zA-Z]+'>
                     </div>
                     <div id='form-field' class='d-flex align-items-baseline justify-content-between'>
                         <label class='label'>Email:</label>
@@ -43,17 +43,16 @@
                     </div>
                     <div id='form-field' class='d-flex align-items-baseline justify-content-between'>
                         <label class="label">Address:</label>
-                        <input class='input' type="text" placeholder='8846 Brookside Street' pattern='[a-zA-Z0-9]{}' required='required'>
+                        <input class='input' type="text" placeholder='8846 Brookside Street' pattern='[a-zA-Z0-9 ]+'
+                            required='required'>
                     </div>
                     <div id='form-field' class='d-flex align-items-baseline justify-content-between'>
                         <label class="label">City:</label>
-                        <input class='input' type="text" placeholder='Millington' pattern='[a-zA-Z]{}'
-                            required='required'>
+                        <input class='input' type="text" placeholder='Millington' pattern='[a-zA-Z]+' required='required'>
                     </div>
                     <div id='form-field' class='d-flex align-items-baseline justify-content-between'>
                         <label class="label">State:</label>
-                        <input class='input' type="text" placeholder='TN' maxlength='2' pattern='[A-Z]{2}'
-                            required='required'>
+                        <input class='input' type="text" placeholder='TN' maxlength='2' pattern='[A-Z]{2}' required='required'>
                     </div>
                     <div id='form-field' class='d-flex align-items-baseline justify-content-between'>
                         <label class="label">Zip Code:</label>
@@ -73,6 +72,16 @@
             </div>
         </div>
     </form>
+    <div id='sales' class='hide'>
+        <div class='d-flex flex-column align-items-center mt-3'>
+            <div class='border-blue rounded'>
+                <h4 class='bg-blue'>Sale Processed</h4>
+                <div class='d-flex flex-column align-items-center p-3'>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- templates go here -->
     <script id='mattressTemplate' type='text/x-handlebars-template'>
