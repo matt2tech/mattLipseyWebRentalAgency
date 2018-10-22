@@ -53,13 +53,7 @@ function renderMattresses() {
     var template = Handlebars.compile(source);
     var data = PAGE_DATA.mattresses;
     for (mattress in data) {
-        var html = template({
-            item: data[mattress].item,
-            desc: data[mattress].desc,
-            price: data[mattress].price,
-            stock: data[mattress].stock,
-            image: data[mattress].image
-        });
+        var html = template(data[mattress]);
         document.getElementById("store").insertAdjacentHTML("beforeend", html);
     }
 }
